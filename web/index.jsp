@@ -93,13 +93,6 @@
             </div>
         </div>
     </div>
-    <div class="row mt-4">
-        <div class="col">
-            <div class="history">
-                тут будет история
-            </div>
-        </div>
-    </div>
 
 </div>
 </body>

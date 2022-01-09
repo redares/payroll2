@@ -1,6 +1,7 @@
+getHistory();
 function calculateEngineerSalary() {
-    let baseSalary = $("#EngineerBaseSalary");
-    let bonus = $("#EngineerBonus");
+    let baseSalary = $("#EngineerBaseSalary").val();
+    let bonus = $("#EngineerBonus").val();
     let salary = $("#EngineerSalary");
 
     let data = {
@@ -15,6 +16,7 @@ function calculateEngineerSalary() {
         data: JSON.stringify(data),
         success: function(response) {
             salary.text(response);
+            getHistory();
         },
         error: function(e) {
             alert("Error! Please try again");
@@ -24,9 +26,9 @@ function calculateEngineerSalary() {
 
 
 function calculateWorkerSalary() {
-    let rate = $("#WorkerRate");
-    let hours = $("#WorkerHours");
-    let oHours = $("#WorkerOvertimeHours");
+    let rate = $("#WorkerRate").val();
+    let hours = $("#WorkerHours").val();
+    let oHours = $("#WorkerOvertimeHours").val();
     let salary = $("#WorkerSalary");
 
     let data = {
@@ -42,6 +44,7 @@ function calculateWorkerSalary() {
         data: JSON.stringify(data),
         success: function (response) {
             salary.text(response);
+            getHistory();
         },
         error: function (e) {
             alert("Error! Please try again");
@@ -51,9 +54,9 @@ function calculateWorkerSalary() {
 
 
 function calculateSalesManagerSalary() {
-    let baseSalary = $("#SalesManagerBaseSalary");
-    let bonus = $("#SalesManagerBonus");
-    let tCount = $("#SalesManagerTransactionsCount");
+    let baseSalary = $("#SalesManagerBaseSalary").val();
+    let bonus = $("#SalesManagerBonus").val();
+    let tCount = $("#SalesManagerTransactionsCount").val();
     let salary = $("#SalesManagerSalary");
 
     let data = {
@@ -69,11 +72,10 @@ function calculateSalesManagerSalary() {
         data: JSON.stringify(data),
         success: function (response) {
             salary.text(response);
+            getHistory();
         },
         error: function (e) {
             alert("Error! Please try again");
         }
     });
 }
-
-
